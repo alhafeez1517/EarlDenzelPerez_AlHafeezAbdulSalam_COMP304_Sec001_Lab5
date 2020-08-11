@@ -13,6 +13,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    // API KEY --> AIzaSyDhkxivSb_0f_gTKE7_HvPsKySQCLsPAUI <-- API KEY //
+
     private GoogleMap mMap;
 
     @Override
