@@ -1,6 +1,7 @@
 package com.example.earldenzelperez_alhafeezabdulsalam_comp304_sec001_lab5;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     // API KEY --> AIzaSyDhkxivSb_0f_gTKE7_HvPsKySQCLsPAUI <-- API KEY //
 
@@ -49,8 +50,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         switch(item.getItemId())
         {
             case R.id.map_none:
-            mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
-            return true;
+                mMap.setMapType(GoogleMap.MAP_TYPE_NONE);
+                return true;
 
             case R.id.map_normal:
                 mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
