@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1.0">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/search_and_whereami_height"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txtSearch"
+            android:layout_width="@dimen/search_text_width"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/enter_a_place"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="@dimen/default_button_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/search" />
+
+        <Button
+            android:id="@+id/btnWhereAmI"
+            android:layout_width="@dimen/default_button_width"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/where_am_i" />
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MapsActivity" />
+
+</LinearLayout>
